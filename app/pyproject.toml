@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "app"
+version = "0.1.0"
+description = ""
+authors = ["geras-papach <papachronopoulos@novelcore.eu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+httpx = "^0.25.0"
+fastapi = "^0.103.2"
+uvicorn = "^0.23.2"
+prometheus-client = "^0.17.1"
+opentelemetry-distro = "0.40b0"
+opentelemetry-instrumentation-fastapi = "0.40b0"
+opentelemetry-instrumentation-logging = "0.40b0"
+opentelemetry-exporter-otlp = "1.19.0"
+pytz = "^2023.3.post1"
+python-dotenv = "^1.0.1"
+pyjwt = "^2.8.0"
+cryptography = "^42.0.1"
+
+[tool.poetry.group.dev.dependencies]
+commitizen = "^2.42.1"
+pre-commit = "^3.1.1"
+pytest = "^7.2.1"
+pytest-asyncio = "^0.20.3"
+flake8 = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "app.main:start"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.1.0"
+# tag_format = "$version"
+
+version_files = [
+    "app/__version__.py"
+]
