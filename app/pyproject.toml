@@ -7,8 +7,8 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-httpx = "^0.25.0"
-fastapi = "^0.103.2"
+httpx = "^0.28.1"
+fastapi = "^0.115.0"
 uvicorn = "^0.23.2"
 prometheus-client = "^0.17.1"
 opentelemetry-distro = "0.40b0"
@@ -19,6 +19,7 @@ pytz = "^2023.3.post1"
 python-dotenv = "^1.0.1"
 pyjwt = "^2.8.0"
 cryptography = "^42.0.1"
+argumentation-mining-benchmarking = {git = "https://github.com/novelcore/argumentation-mining-benchmarking.git", branch = "feature/add-entire-benchmarking-functionality"}
 
 [tool.poetry.group.dev.dependencies]
 commitizen = "^2.42.1"
